@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>iMessage Admin</title>
+        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="/css/jquery-ui-1.8.23.custom.css" />
+        <script type="text/javascript" src="/js/jquery.js" ></script>
+        <script type="text/javascript" src="/js/jquery-ui-1.8.23.custom.min.js" ></script>
+    </head>
+    <body>
+        <div class="head">
+            <div class="head_left"><h1>应用后台</h1></div>
+            <div class="head_right">欢迎登陆，管理员：{{.UserName}}|<a id="logout" href="#">退出系统</a></div>
+        </div>
+        <div class="left">
+            <table class="left_table" data-type="tree" tree-data="/admin/tree/ajax" target-iframe="main_iframe">
+            </table>
+        </div>
+        <div class="main">
+            <iframe id="main_iframe" class="main_iframe" frameborder=0 src="/admin/welcome/iframe"></iframe>
+        </div>
+        
